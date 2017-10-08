@@ -1,4 +1,5 @@
 
+
 class EventManager {
     constructor() {
         this.urlBase = "/events"
@@ -73,8 +74,10 @@ class EventManager {
         });
         $('#allDay').on('change', function(){
             if (this.checked) {
+              console.log("Día completo")
                 $('.timepicker, #end_date').attr("disabled", "disabled")
             }else {
+              console.log("No día completo")
                 $('.timepicker, #end_date').removeAttr("disabled")
             }
         })
@@ -87,7 +90,7 @@ class EventManager {
                 center: 'title',
                 right: 'month,agendaWeek,basicDay'
             },
-            defaultDate: '2016-11-01',
+            defaultDate: '2017-10-01',
             navLinks: true,
             editable: true,
             eventLimit: true,
@@ -114,9 +117,22 @@ class EventManager {
                         this.eliminarEvento(event)
                         $('.calendario').fullCalendar('removeEvents', event.id);
                     }
-                }
+                },
+                dayClick: function() {
+                alert('a day has been clicked!');
+               }
             })
         }
     }
 
     const Manager = new EventManager()
+
+
+    $(document).ready(function() {
+
+
+        Manager.inicializarFormulario();
+        Manager.inicializarCalendario();
+
+
+    });
