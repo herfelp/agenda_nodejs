@@ -153,7 +153,10 @@ class EventManager {
   cerrarsesion() {
 
     $('#logout_b').on('click', () => {
-      window.location.href = "http://localhost:8083"
+      $.post('/events/end', (response) => {
+        window.location.href = "http://localhost:8083"
+        
+      })
 
     })
   }

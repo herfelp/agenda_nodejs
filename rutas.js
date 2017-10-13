@@ -81,7 +81,11 @@ Router.post('/actualizar/:id/:sta/:en_', function(req, res) {
 })
 
 
-
+Router.post('/end', (req, res) => {
+  req.session = null;
+  
+  res.send();
+});
 
 
 

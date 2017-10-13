@@ -176,6 +176,20 @@ input {
   margin-bottom: 55px;
   cursor: pointer;
 }
+.loButton {
+  margin-top: auto;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  border: none;
+  font-size: 17px;
+  color: #FFFFFF;
+  background: transparent;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Neucha', cursive;
+  margin-bottom: auto;
+  cursor: pointer;
+}
 
 .drop-event {
   margin-bottom: 10px;

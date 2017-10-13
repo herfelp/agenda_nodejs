@@ -12,7 +12,7 @@ else{
       console.log(err);
       res.redirect("/");
     }else{
-        console.log(req.session.user_id);
+        //console.log(req.session.user_id);
         res.locals = { user: user};
         next();
     };

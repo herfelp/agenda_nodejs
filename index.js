@@ -30,7 +30,6 @@ mongoose.connect('mongodb://localhost/agenda', {
       password: Math.floor((Math.random() * 1000000) + 100000)
     });
 
-    /*
         user.save(function(err){
          if(!err){
            console.log("Credenciales de acceso:")
@@ -40,8 +39,6 @@ mongoose.connect('mongodb://localhost/agenda', {
            console.log("Error" + err);
          }
        });
-
-      */
 
   }
 });
