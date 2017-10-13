@@ -7,6 +7,10 @@ let UserSchema = new Schema({
   password: { type: String}
 })
 
+
+
+
 let UserModel = mongoose.model('Usuario', UserSchema)
+
 
 module.exports = UserModel;
